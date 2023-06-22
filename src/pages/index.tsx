@@ -5,7 +5,7 @@ import Hero from "../components/hero"
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
-      <h1>Hello world!</h1>
+      <Hero />
     </main>
   )
 }
