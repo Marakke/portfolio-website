@@ -1,4 +1,4 @@
-import * as React from "react"
+import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import "./hero.scss"
@@ -7,20 +7,20 @@ const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
       hero: datoCmsHero {
-        headerText
-        title
-        description
+        heroText
       }
     }
   `)
 
   const { hero } = data
-
+  
   return (
     <div>
-      <h2 className="header-text">{hero.headerText}</h2>
-      <h1 className="title">{hero.title}</h1>
-      <p className="description">{hero.description}</p>
+      <p className="tag">{"<></><></><></><></><></><></><></><></>"}</p>
+      <p className="tag2">{"<></><></><></><></><></><></><></><></>"}</p>
+      <p className="text">{hero.heroText}</p>
+      <p className="tag4">{"<></><></><></><></><></><></><></><></>"}</p>
+      <p className="tag5">{"<></><></><></><></><></><></><></><></>"}</p>
     </div>
   )
 }

@@ -1,6 +1,15 @@
+@import '../styles/theme.scss';
 
 body,
 html {
   font-family: Inter;
+  color: $white;
+  background-color: $black;
+}
+
+.app {
+  max-width: 1300px;
+  display: flex;
+  margin: auto 80px;
 }
     
