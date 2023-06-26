@@ -43,6 +43,10 @@
   position: absolute;
   right: 100px;
   gap: 5px;
+
+  @media screen and (min-width: $lg) {
+    right: calc((100vw - 1300px) / 2 + 100px);
+  }
 }
 
 .line {

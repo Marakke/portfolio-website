@@ -7,7 +7,9 @@ const Hero = () => {
   const data = useStaticQuery(graphql`
     query {
       hero: datoCmsHero {
-        heroText
+        title1
+        title2
+        title3
       }
     }
   `)
@@ -16,11 +18,21 @@ const Hero = () => {
 
   return (
     <div className="heroContainer">
-      <p className="tag">{"<></><></><></><></><></><></><></><></>"}</p>
-      <p className="tag2">{"<></><></><></><></><></><></><></><></>"}</p>
-      <h1 className="text">{hero.heroText}</h1>
-      <p className="tag4">{"<></><></><></><></><></><></><></><></>"}</p>
-      <p className="tag5">{"<></><></><></><></><></><></><></><></>"}</p>
+      <div className="row">
+        <p className="text">{"<>"}</p><p className="tag">{"</><></><></><></><></><></><></><></><></>"}</p>
+      </div>
+      <div className="row">
+        <p className="tag2">{"<>"}</p><h1 className="text">{hero.title1}</h1><p className="tag2">{"</><></><></><></><></><></><></>"}</p>
+        </div>
+      <div className="row">
+        <p className="tag3">{"<>"}</p><h1 className="text">{hero.title2}</h1><p className="tag3">{"</><></><></><></><></><></>"}</p>
+      </div>
+      <div className="row">
+        <p className="tag4">{"<>"}</p><h1 className="text">{hero.title3}</h1><p className="tag4">{"</><></><></><></><></><></>"}</p>
+      </div>
+      <div className="row">
+      <p className="text">{"</>"}</p><p className="tag5">{"</><></><></><></><></><></><></><></><></><></>"}</p>
+      </div>
     </div>
   )
 }

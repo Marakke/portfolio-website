@@ -6,6 +6,11 @@
   word-wrap: break-word;
 }
 
+.row {
+  display: flex;
+  gap: 0px;
+}
+
 .tag {
   opacity: 0.5;
   font-size: 57.9px;
@@ -40,6 +45,16 @@
 
 .text {
   color: $electricBlue;
-  text-shadow: -1px 1px 5px 0px rgba(255, 255, 255, 0.50);
+  text-shadow:
+  -1px 1px 0px rgba(255, 255, 255, 0.3),
+  -2px 2px 0px rgba(255, 255, 255, 0.2),
+  -3px 3px 0px rgba(255, 255, 255, 0.1);
   margin: 0;
+  white-space: nowrap;
+  font-size: 57.9px;
+  font-weight: 700;
+
+  @media screen and (max-width: $md) {
+    font-size: 30px;
+  }
 }
