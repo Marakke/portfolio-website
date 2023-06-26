@@ -5,6 +5,14 @@ html {
   font-family: Inter;
   color: $white;
   background-color: $black;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
 
 .app {
