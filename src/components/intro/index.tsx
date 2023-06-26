@@ -26,7 +26,7 @@ const Intro = () => {
 
   return (
     <div className="introContainer">
-      <h1 className="title">{intro.title}</h1>
+      <h2>{intro.title}</h2>
       <div className="introContent">
         <Img {...intro.image} className="image" />
         <div>

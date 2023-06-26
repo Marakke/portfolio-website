@@ -1,8 +1,21 @@
+@import '../../styles/theme.scss';
+
+.heroContainer {
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
 .tag {
   opacity: 0.5;
   font-size: 57.9px;
   font-weight: 700;
-  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @media screen and (max-width: $md) {
+    font-size: 30px;
+  }
 }
 
 .tag2 {
@@ -26,9 +39,7 @@
 }
 
 .text {
-  color: #0073E6;
+  color: $electricBlue;
   text-shadow: -1px 1px 5px 0px rgba(255, 255, 255, 0.50);
-  font-size: 57.9px;
-  font-weight: 700;
   margin: 0;
 }

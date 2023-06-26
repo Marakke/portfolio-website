@@ -13,12 +13,12 @@ const Hero = () => {
   `)
 
   const { hero } = data
-  
+
   return (
-    <div>
+    <div className="heroContainer">
       <p className="tag">{"<></><></><></><></><></><></><></><></>"}</p>
       <p className="tag2">{"<></><></><></><></><></><></><></><></>"}</p>
-      <p className="text">{hero.heroText}</p>
+      <h1 className="text">{hero.heroText}</h1>
       <p className="tag4">{"<></><></><></><></><></><></><></><></>"}</p>
       <p className="tag5">{"<></><></><></><></><></><></><></><></>"}</p>
     </div>
