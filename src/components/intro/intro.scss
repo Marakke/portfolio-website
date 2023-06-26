@@ -12,13 +12,29 @@
 .introContent {
   display: flex;
   gap: 80px;
+  z-index: 1;
 }
 
 .image {
   min-width: 300px;
+  height: 300px;
   border-radius: 50%;
 }
 
 .description {
   font-size: 21px;
+  max-width: 780px;
+}
+
+.lines {
+  display: flex;
+  position: absolute;
+  right: 100px;
+  gap: 5px;
+}
+
+.line {
+  width: 5px;
+  height: 400px;
+  background-color: #0073E6;
 }

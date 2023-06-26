@@ -35,6 +35,13 @@ const Intro = () => {
           <p className="description">{intro.descriptionFooter}</p>
         </div>
       </div>
+      <div className="lines">
+        <p className="line" />
+        <p className="line" />
+        <p className="line" />
+        <p className="line" />
+        <p className="line" />
+      </div>
     </div>
   )
 }
