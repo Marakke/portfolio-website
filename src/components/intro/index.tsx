@@ -25,9 +25,9 @@ const Intro = () => {
   const { intro } = data
 
   return (
-    <div className="introContainer">
+    <div className="intro-container">
       <h2>{intro.title}</h2>
-      <div className="introContent">
+      <div className="intro-content">
         <Img {...intro.image} className="image" />
         <div>
           <p className="description">{intro.descriptionTitle}</p>

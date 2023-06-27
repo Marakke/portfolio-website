@@ -1,18 +1,18 @@
 @import '../../styles/theme.scss';
 
-.introContainer {
-  margin: 40px 0 40px 0;
+.intro-container {
+  padding: 40px 80px 40px 80px;
   display: flex;
   flex-direction: column;
   gap: 40px;
 
   @media screen and (max-width: $md) {
-    margin: 20px 0 30px 0;
+    padding: 20px 0 30px 0;
     gap: 20px;
   }
 }
 
-.introContent {
+.intro-content {
   display: flex;
   gap: 80px;
   z-index: 1;
@@ -36,6 +36,10 @@
 
 .description {
   max-width: 780px;
+
+  &:nth-child(2) {
+    margin: 20px 0;
+  }
 }
 
 .lines {

@@ -17,7 +17,7 @@ const Hero = () => {
   const { hero } = data
 
   return (
-    <div className="heroContainer">
+    <div className="hero-container">
       <div className="row">
         <p className="text">{"<>"}</p><p className="tag">{"</><></><></><></><></><></><></><></><></>"}</p>
       </div>

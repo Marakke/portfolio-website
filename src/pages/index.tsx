@@ -4,6 +4,7 @@ import "./index.scss"
 
 import Hero from "../components/hero"
 import Intro from "../components/intro"
+import Skills from "../components/skills"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,6 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Hero />
       <div className="app">
         <Intro />
+        <Skills />
       </div>
     </main>
   )

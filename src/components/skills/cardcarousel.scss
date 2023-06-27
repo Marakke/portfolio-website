@@ -1,0 +1,67 @@
+@import '../../styles/theme.scss';
+
+.card-carousel-wrapper {
+  position: relative;
+  margin: 20px 0;
+
+  @media (--below-screen-sm) {
+    margin: 10px 0;
+  }
+}
+
+.card-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 24px;
+  margin-right: -80px;
+  margin-left: -12px;
+  padding: 20px 80px 20px 12px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 12px;
+  scroll-behaviour: smooth;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.card-carousel-card {
+  display: flex;
+}
+
+.card-carousel-button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+  padding: 18px 22px;
+  top: 120px;
+  transform: translateY(-50%);
+  color: $white;
+  background: $deepSea;
+  box-shadow:
+    1px 1px 4px 0px rgba(0, 0, 0, 0.50),
+    -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-size: 80px;
+
+  &:hover {
+    box-shadow:
+      -4px 4px 4px 0px rgba(0, 0, 0, 0.25),
+      1px 1px 4px 0px rgba(0, 0, 0, 0.50);
+  }
+}
+
+.card-carousel-button-left {
+  @extend .card-carousel-button;
+  left: 0;
+}
+
+.card-carousel-button-right {
+  @extend .card-carousel-button;
+  right: 0;
+}
+  
