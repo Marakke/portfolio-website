@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { CardCarousel } from "./cardcarousel"
+import questionSvg from "../../images/question.svg";
 
 import "./skills.scss"
 
@@ -21,36 +22,55 @@ const Skills = () => {
           level
           xp
         }
+        helpText
       }
     }
   `)
 
   const { skills } = data
 
+  const [showHelp, setShowHelp] = useState(false);
+
+  const handleMouseEnter = () => {
+    setShowHelp(true);
+  };
+
+  const handleMouseLeave = () => {
+    setShowHelp(false);
+  };
+
   return (
     <div className="skills-container">
       <h2>{skills.title}</h2>
-        <CardCarousel>
+      <CardCarousel>
         {skills.skills.map((skill: any, index: number) => (
-          <div
-            key={index}
-            className="skill-card"
-          >
+          <div key={index} className="skill-card">
             {skill.image ? <Img {...skill.image} /> : <p className="template">{"</>"}</p>}
             <div className="skill-details">
               <h3>{skill.name}</h3>
-              <p className="detail"><p className="level">Level:</p> {skill.level}</p>
-              <p className="detail"><p className="xp">XP:</p> {skill.xp} years</p>
+              <div className="detail">
+                <p className="level">Level:</p> {skill.level}
+              </div>
+              <div className="detail">
+                <p className="xp">XP:</p> {skill.xp} years
+                <img
+                  src={questionSvg}
+                  alt="Question Icon"
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                />
+                {showHelp && <div className="help-text">{skills.helpText}</div>}
+              </div>
             </div>
           </div>
         ))}
-        </CardCarousel>
-      <div className="lines">
-        <p className="line" />
-        <p className="line" />
-        <p className="line" />
-        <p className="line" />
-        <p className="line" />
+      </CardCarousel>
+      <div className="lines skills">
+        <p className="line skills" />
+        <p className="line skills" />
+        <p className="line skills" />
+        <p className="line skills" />
+        <p className="line skills" />
       </div>
     </div>
   )

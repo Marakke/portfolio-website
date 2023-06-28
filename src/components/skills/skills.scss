@@ -21,6 +21,7 @@
   border-radius: 20px;
   background-color: $lightGray;
   overflow: hidden;
+  box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.50);
 
   .template {
     width: 100%;
@@ -64,22 +65,45 @@
     .xp {
       margin-right: 30px;
     }
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-left: auto;
+  
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .help-text {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $lightGray;
+      color: $black;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 400;
+      transition: visibility 0s, opacity 0.2s ease-in-out;
+    }
   }
 }
 
 .lines {
-  display: flex;
-  position: absolute;
-  right: 100px;
-  gap: 5px;
+  &.skills {
+    flex-direction: column;
+    right: 0;
+    
+    @media screen and (min-width: $lg) {
+      right: calc((100vw - 1440px) / 2);
+    }
 
-  @media screen and (min-width: $lg) {
-    right: calc((100vw - 1300px) / 2 + 100px);
+    .line {
+      width: 400px;
+      height: 5px;
+    }
   }
-}
-
-.line {
-  width: 5px;
-  height: 400px;
-  background-color: $electricBlue;
 }

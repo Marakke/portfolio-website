@@ -56,4 +56,22 @@ main {
     margin: auto 20px;
   }
 }
-    
+
+.lines {
+  display: flex;
+  position: absolute;
+  right: 100px;
+  margin-top: -40px;
+  gap: 5px;
+
+  @media screen and (min-width: $lg) {
+    right: calc((100vw - 1440px) / 2 + 100px);
+  }
+}
+
+.line {
+  width: 5px;
+  height: 400px;
+  background-color: $electricBlue;
+}
+   

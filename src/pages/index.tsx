@@ -9,8 +9,8 @@ import Skills from "../components/skills"
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
-      <Hero />
       <div className="app">
+        <Hero />
         <Intro />
         <Skills />
       </div>
