@@ -26,9 +26,12 @@ h1 {
 h2 {
   font-size: 48px;
   margin: 0;
+  margin-bottom: 40px;
+  height: 1em;
 
   @media screen and (max-width: $md) {
     font-size: 21px;
+    margin-bottom: 20px;
   }
 }
 

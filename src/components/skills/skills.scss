@@ -1,18 +1,23 @@
 @import '../../styles/theme.scss';
 
 .skills-container {
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: minmax(0, 1fr);
+  display: flex;
   padding: 40px 80px 40px 80px;
   flex-direction: column;
   gap: 40px;
   background-color: $deepSea;
+  overflow: hidden;
 
   @media screen and (max-width: $md) {
     padding: 20px 20px 30px 20px;
     gap: 20px;
   }
+}
+
+.skills-content {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .skill-card {
@@ -24,6 +29,7 @@
   background-color: $lightGray;
   overflow: hidden;
   box-shadow: -4px 4px 4px 0px rgba(0, 0, 0, 0.50);
+  transition: height 0.3s ease-in-out;
 
   .template {
     width: 100%;
@@ -38,16 +44,17 @@
     height: 340px;
   }
 
-  &:hover .skill-details {
-    display: block;
+  &:hover .skill-details { 
+    height: 140px;
   }
 }
 
 .skill-details {
-  display: none;
-  height: 140px;
+  display: block;
+  height: 0;
   background-color: $black;
   font-weight: 700;
+  transition: height 0.3s ease-in-out;
 
   h3 {
     text-align: center;
@@ -77,21 +84,18 @@
         cursor: pointer;
       }
     }
-
-    .help-text {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: $lightGray;
-      color: $black;
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 400;
-      transition: visibility 0s, opacity 0.2s ease-in-out;
-    }
   }
+}
+
+.help-text {
+  background-color: $lightGray;
+  color: $black;
+  margin: 0 auto;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .lines {

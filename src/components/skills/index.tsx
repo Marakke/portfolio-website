@@ -41,30 +41,32 @@ const Skills = () => {
 
   return (
     <div className="skills-container">
-      <h2>{skills.title}</h2>
-      <CardCarousel>
-        {skills.skills.map((skill: any, index: number) => (
-          <div key={index} className="skill-card">
-            {skill.image ? <Img {...skill.image} /> : <p className="template">{"</>"}</p>}
-            <div className="skill-details">
-              <h3>{skill.name}</h3>
-              <div className="detail">
-                <p className="level">Level:</p> {skill.level}
-              </div>
-              <div className="detail">
-                <p className="xp">XP:</p> {skill.xp} years
-                <img
-                  src={questionSvg}
-                  alt="Question Icon"
-                  onMouseEnter={handleMouseEnter}
-                  onMouseLeave={handleMouseLeave}
-                />
-                {showHelp && <div className="help-text">{skills.helpText}</div>}
+      <div className="skills-content">
+        <h2>{skills.title}</h2>
+        <CardCarousel>
+          {skills.skills.map((skill: any, index: number) => (
+            <div key={index} className="skill-card">
+              {skill.image ? <Img {...skill.image} /> : <p className="template">{"</>"}</p>}
+              <div className="skill-details">
+                <h3>{skill.name}</h3>
+                <div className="detail">
+                  <p className="level">Level:</p> {skill.level}
+                </div>
+                <div className="detail">
+                  <p className="xp">XP:</p> {skill.xp} years
+                  <img
+                    src={questionSvg}
+                    alt="Question Icon"
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </CardCarousel>
+          ))}
+        </CardCarousel>
+        {showHelp && <div className="help-text">{skills.helpText}</div>}
+      </div>
       <div className="lines skills">
         <p className="line skills" />
         <p className="line skills" />
