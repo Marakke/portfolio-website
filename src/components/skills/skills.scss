@@ -102,10 +102,10 @@
 .lines {
   &.skills {
     flex-direction: column;
-    right: 0;
+    left: calc(100% - 400px);
     
     @media screen and (min-width: $lg) {
-      right: calc((100vw - 1440px) / 2);
+      left: calc((100vw - 1440px) / 2 + 1440px - 409px);
     }
 
     .line {

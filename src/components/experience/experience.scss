@@ -88,7 +88,7 @@
 
 .lines {
   &.experience {
-    right: 50%;
+    right: calc(50% - 45px);
 
     @media screen and (max-width: $md) {
       right: 5px;
