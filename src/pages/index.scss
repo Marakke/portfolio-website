@@ -51,10 +51,6 @@ main {
   max-width: 1440px;
   display: flex;
   flex-direction: column;
-
-  @media screen and (max-width: $md) {
-    margin: auto 20px;
-  }
 }
 
 .lines {
@@ -66,6 +62,10 @@ main {
 
   @media screen and (min-width: $lg) {
     right: calc((100vw - 1440px) / 2 + 100px);
+  }
+
+  @media screen and (max-width: $md) {
+    margin-top: -20px;
   }
 }
 

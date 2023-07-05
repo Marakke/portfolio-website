@@ -2,11 +2,6 @@
 
 .card-carousel-wrapper {
   position: relative;
-  margin: 20px 0;
-
-  @media (--below-screen-sm) {
-    margin: 10px 0;
-  }
 }
 
 .card-carousel {

@@ -1,14 +1,16 @@
 @import '../../styles/theme.scss';
 
 .skills-container {
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: minmax(0, 1fr);
   padding: 40px 80px 40px 80px;
-  display: flex;
   flex-direction: column;
   gap: 40px;
   background-color: $deepSea;
 
   @media screen and (max-width: $md) {
-    padding: 20px 0 30px 0;
+    padding: 20px 20px 30px 20px;
     gap: 20px;
   }
 }
@@ -99,6 +101,7 @@
     
     @media screen and (min-width: $lg) {
       right: calc((100vw - 1440px) / 2);
+      top: 20px;
     }
 
     .line {
