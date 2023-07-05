@@ -1,0 +1,101 @@
+@import '../../styles/theme.scss';
+
+.experience-container {
+  padding: 40px 80px 40px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $electricBlue;
+
+  @media screen and (max-width: $md) {
+    padding: 20px 20px 30px 20px;
+    gap: 40px;
+    flex-direction: column;
+  }
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  .education-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media screen and (max-width: $md) {
+      align-items: center;
+      gap: 30px;
+    }
+
+    .programmes {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  
+      .programme {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+  
+        @media screen and (max-width: $md) {
+          flex-direction: column;
+        }
+  
+        .name {
+          width: 350px;
+
+          @media screen and (max-width: $md) {
+            width: fit-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+.work-experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (max-width: $md) {
+    gap: 30px;
+  }
+
+  .work-places {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: $md) {
+      align-items: center;
+    }
+
+    .work-place {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+
+      .name {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.lines {
+  &.experience {
+    right: 50%;
+
+    @media screen and (max-width: $md) {
+      right: 5px;
+    }
+
+    .line {   
+      background-color: $black;
+    }
+  }
+}
