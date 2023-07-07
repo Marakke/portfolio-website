@@ -47,7 +47,7 @@ export const CardCarousel = ({ children }: any) => {
     <div className="card-carousel-wrapper">
       {!firstVisible && (
         <button onClick={prev} className="card-carousel-button-left">
-          {"<"}
+          <span>{"<"}</span>
         </button>
       )}
       <div ref={ref} className="card-carousel">
@@ -63,7 +63,7 @@ export const CardCarousel = ({ children }: any) => {
       </div>
       {!lastVisible && (
         <button onClick={next} className="card-carousel-button-right">
-          {">"}
+          <span>{">"}</span>
         </button>
       )}
     </div>
