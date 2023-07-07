@@ -108,9 +108,17 @@
       left: calc((100vw - 1440px) / 2 + 1440px - 409px);
     }
 
+    @media screen and (max-width: $md) {
+      left: 100px;
+    }
+
     .line {
       width: 400px;
       height: 5px;
+
+      @media screen and (max-width: $md) {
+        width: calc(100vw - 100px);
+      }
     }
   }
 }
