@@ -64,7 +64,7 @@ main {
   gap: 5px;
   z-index: 0;
 
-  @media screen and (min-width: $lg) {
+  @media screen and (min-width: $xlg) {
     right: calc((100vw - 1440px) / 2 + 100px);
   }
 
@@ -82,7 +82,7 @@ main {
     flex-direction: column;
     left: calc(100% - 400px);
     
-    @media screen and (min-width: $lg) {
+    @media screen and (min-width: $xlg) {
       left: calc((100vw - 1440px) / 2 + 1440px - 409px);
     }
 

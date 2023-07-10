@@ -38,7 +38,7 @@ const Experience = () => {
           <h3 className="university">{experience.education.university}</h3>
           <div className="programmes">
             {experience.education.programmes.map(( programme: any ) => (
-              <div className="programme">
+              <div className="programme" key={programme.name}>
                 <p className="name">{programme.name}</p>
                 <p className="years">{programme.startYear} {"->"} {programme.endYear}</p>
               </div>
@@ -50,7 +50,7 @@ const Experience = () => {
         <h2>{experience.workExperience.title}</h2>
         <div className="work-places">
           {experience.workExperience.workPlaces.map(( workPlace: any ) => (
-            <div className="work-place">
+            <div className="work-place" key={workPlace.name}>
               <h3 className="name">{workPlace.name}</h3>
               <p className="years">{workPlace.startYear} {"->"} {workPlace.endYear}</p>
             </div>
