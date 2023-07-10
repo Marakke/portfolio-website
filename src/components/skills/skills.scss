@@ -2,15 +2,13 @@
 
 .skills-container {
   display: flex;
-  padding: 40px 80px 40px 80px;
+  padding: 80px 80px 40px 80px;
   flex-direction: column;
-  gap: 40px;
   background-color: $deepSea;
   overflow: hidden;
 
   @media screen and (max-width: $md) {
     padding: 20px 20px 30px 20px;
-    gap: 20px;
   }
 }
 
@@ -97,28 +95,4 @@
   border-radius: 6px;
   font-size: 14px;
   font-weight: 400;
-}
-
-.lines {
-  &.skills {
-    flex-direction: column;
-    left: calc(100% - 400px);
-    
-    @media screen and (min-width: $lg) {
-      left: calc((100vw - 1440px) / 2 + 1440px - 409px);
-    }
-
-    @media screen and (max-width: $md) {
-      left: 100px;
-    }
-
-    .line {
-      width: 400px;
-      height: 5px;
-
-      @media screen and (max-width: $md) {
-        width: calc(100vw - 100px);
-      }
-    }
-  }
 }

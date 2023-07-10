@@ -1,7 +1,7 @@
 @import '../../styles/theme.scss';
 
 .experience-container {
-  padding: 40px 80px 40px 80px;
+  padding: 80px 80px 40px 80px;
   display: flex;
   flex-direction: row;
   gap: 20%;
@@ -21,8 +21,11 @@
 .education-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   z-index: 1;
+
+  @media screen and (max-width: $md) {
+    gap: 10px;
+  }
 
   .education-content {
     display: flex;
@@ -68,10 +71,9 @@
 .work-experience-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 
   @media screen and (max-width: $md) {
-    gap: 30px;
+    gap: 10px;
   }
 
   .work-places {

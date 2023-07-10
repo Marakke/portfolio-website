@@ -67,12 +67,12 @@ const Skills = () => {
         </CardCarousel>
         {showHelp && <div className="help-text">{skills.helpText}</div>}
       </div>
-      <div className="lines skills">
-        <p className="line skills" />
-        <p className="line skills" />
-        <p className="line skills" />
-        <p className="line skills" />
-        <p className="line skills" />
+      <div className="lines horizontal">
+        <p className="line horizontal" />
+        <p className="line horizontal" />
+        <p className="line horizontal" />
+        <p className="line horizontal" />
+        <p className="line horizontal" />
       </div>
     </div>
   )

@@ -30,8 +30,6 @@ const Experience = () => {
 
   const { experience } = data
 
-  console.log(experience)
-
   return (
     <div className="experience-container">
       <div className="education-container">

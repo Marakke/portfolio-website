@@ -60,7 +60,7 @@ main {
   display: flex;
   position: absolute;
   right: 100px;
-  margin-top: -40px;
+  margin-top: -80px;
   gap: 5px;
   z-index: 0;
 
@@ -71,11 +71,37 @@ main {
   @media screen and (max-width: $md) {
     margin-top: -20px;
   }
-}
 
-.line {
-  width: 5px;
-  height: 400px;
-  background-color: $electricBlue;
+  .line {
+    width: 5px;
+    height: 400px;
+    background-color: $electricBlue;
+  }
+
+  &.horizontal {
+    flex-direction: column;
+    left: calc(100% - 400px);
+    
+    @media screen and (min-width: $lg) {
+      left: calc((100vw - 1440px) / 2 + 1440px - 409px);
+    }
+
+    @media screen and (max-width: $md) {
+      left: 100px;
+    }
+
+    &.projects {
+      margin-top: -75px;
+    }
+
+    .line {
+      width: 400px;
+      height: 5px;
+
+      @media screen and (max-width: $md) {
+        width: calc(100vw - 100px);
+      }
+    }
+  }
 }
    
