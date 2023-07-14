@@ -28,6 +28,7 @@ h2 {
   margin: 0;
   margin-bottom: 40px;
   height: fit-content;
+  z-index: 1;
 
   @media screen and (max-width: $md) {
     font-size: 21px;

@@ -59,6 +59,12 @@ $xlg: 1440px;
     background-color: $electricBlue;
   }
 
+  &.contact {
+    .line {
+      height: 334.8px;
+    }
+  }
+
   &.horizontal {
     flex-direction: column;
     left: calc(100% - 400px);

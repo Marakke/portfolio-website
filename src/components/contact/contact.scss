@@ -1,0 +1,82 @@
+@import '../../styles/theme.scss';
+
+.contact-container {
+  padding: 80px 80px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  background-color: $coralRed;
+  z-index: 1;
+
+  @media screen and (max-width: $md) {
+    padding: 20px 20px 30px 20px;
+  }
+
+  .contact-title {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: $md) {
+      gap: 10px;
+    }
+
+    .title-black {
+      color: black;
+    }
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    z-index: 1;
+
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @media screen and (max-width: $md) {
+        order: 2;
+      }
+  
+      .contact-link {
+        display: flex;
+        gap: 20px;
+  
+        img {
+          width: 24px;
+          height: 24px;
+        }
+  
+        a {
+          color: white;
+          font-weight: 700;
+
+          @media screen and (max-width: $md) {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+
+    .contact-description {
+      font-weight: 500;
+
+      @media screen and (max-width: $md) {
+        font-size: 16px;
+        order: 1;
+      }
+
+      .description {
+        &:nth-child(2) {
+          margin: 20px 0 0 0;
+        }
+      }
+    }
+  }
+}
