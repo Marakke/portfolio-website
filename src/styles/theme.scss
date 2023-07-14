@@ -10,3 +10,82 @@ $sm: 600px;
 $md: 768px;
 $lg: 1024px;
 $xlg: 1440px;
+
+.button {
+  display: flex;
+  width: 364px;
+  min-height: 80px;
+  border-radius: 20px;
+  background-color: $electricBlue;
+  color: $white;
+  gap: 20px;
+  align-items: center;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 11px 20px;
+  border: none;
+  box-shadow:
+    1px 1px 4px 0px rgba(0, 0, 0, 0.50),
+    -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  &:hover {
+    cursor: pointer;
+    box-shadow:
+      1px 1px 6px 0px rgba(0, 0, 0, 0.75),
+      -4px 4px 6px 0px rgba(0, 0, 0, 0.50);
+  }
+}
+
+.lines {
+  display: flex;
+  position: absolute;
+  right: 100px;
+  margin-top: -80px;
+  gap: 5px;
+  z-index: 0;
+
+  @media screen and (min-width: $xlg) {
+    right: calc((100vw - 1440px) / 2 + 100px);
+  }
+
+  @media screen and (max-width: $md) {
+    margin-top: -20px;
+  }
+
+  .line {
+    width: 5px;
+    height: 400px;
+    background-color: $electricBlue;
+  }
+
+  &.horizontal {
+    flex-direction: column;
+    left: calc(100% - 400px);
+    
+    @media screen and (min-width: $xlg) {
+      left: calc((100vw - 1440px) / 2 + 1440px - 409px);
+    }
+
+    @media screen and (max-width: $md) {
+      left: 100px;
+    }
+
+    &.projects {
+      margin-top: -75px;
+
+      @media screen and (max-width: $md) {
+        margin-top: -25px;
+      }
+    }
+
+    .line {
+      width: 400px;
+      height: 5px;
+
+      @media screen and (max-width: $md) {
+        width: calc(100vw - 100px);
+      }
+    }
+  }
+}

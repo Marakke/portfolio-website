@@ -22,32 +22,6 @@
   }
 }
 
-.button {
-  display: flex;
-  width: 364px;
-  min-height: 80px;
-  border-radius: 20px;
-  background-color: $electricBlue;
-  color: $white;
-  gap: 20px;
-  align-items: center;
-  text-align: left;
-  font-size: 24px;
-  font-weight: 700;
-  padding: 11px 20px;
-  border: none;
-  box-shadow:
-    1px 1px 4px 0px rgba(0, 0, 0, 0.50),
-    -4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-  &:hover {
-    cursor: pointer;
-    box-shadow:
-      1px 1px 6px 0px rgba(0, 0, 0, 0.75),
-      -4px 4px 6px 0px rgba(0, 0, 0, 0.50);
-  }
-}
-
 .content-left {
   display: flex;
   flex-direction: column;
@@ -134,6 +108,7 @@
   width: 100%;
   max-width: 575px;
   align-self: center;
+  font-size: 18px;
   
   @media screen and (min-width: $md) {
     display: none;

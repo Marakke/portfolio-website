@@ -25,12 +25,10 @@ const Projects = () => {
   const { projects } = data
 
   const handleButtonClick = () => {
-    console.log(projects.buttonLink);
     window.open(projects.buttonLink, "_blank");
   }
 
   const handleProjectClick = (project: any) => {
-    console.log(project.link);
     window.open(project.link, "_blank");
   }
 

@@ -1,0 +1,62 @@
+@import '../../styles/theme.scss';
+
+.banner-container {
+  display: flex;
+  height: 80px;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(90deg, #FF8A00 0%, #17A300 100%);
+  padding: 0 20px;
+
+  audio {
+    width: 300px;
+    min-width: 84px;
+    
+    &::-webkit-media-controls-panel {
+      background: linear-gradient(90deg, #17A300 0%, #FF8A00 100%);
+    }
+
+    @media screen and (max-width: $md) {
+      width: 84px;
+
+      &::-webkit-media-controls-timeline {
+        display: none;
+      }
+    }
+  }
+
+  .banner-text {
+    text-align: center;
+
+    @media screen and (max-width: $md) {
+      font-size: 18px;
+    }
+  }
+
+  .banner-buttons {
+    display: flex;
+
+    .banner-button {
+      @extend .button;
+
+      width: fit-content;
+      min-height: 60px;
+      background-color: $deepSea;
+      font-size: 21px;
+
+      @media screen and (max-width: $md) {
+        width: 80px;
+        
+        .banner-button-text {
+          display: none;
+        }
+      }
+
+      .logo {
+        height: 40px;
+        width: 40px;
+        object-fit: fill;
+      }
+    }
+  }
+}
