@@ -23,10 +23,6 @@
   flex-direction: column;
   z-index: 1;
 
-  @media screen and (max-width: $md) {
-    gap: 10px;
-  }
-
   .education-content {
     display: flex;
     flex-direction: column;
@@ -71,10 +67,6 @@
 .work-experience-container {
   display: flex;
   flex-direction: column;
-
-  @media screen and (max-width: $md) {
-    gap: 10px;
-  }
 
   .work-places {
     display: flex;
