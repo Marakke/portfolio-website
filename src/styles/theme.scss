@@ -13,14 +13,14 @@ $xlg: 1440px;
 
 .button {
   display: flex;
-  width: 364px;
+  width: 100%;
   min-height: 80px;
   border-radius: 20px;
   background-color: $electricBlue;
   color: $white;
-  gap: 20px;
   align-items: center;
-  text-align: left;
+  justify-content: space-evenly;
+  text-align: center;
   font-size: 24px;
   font-weight: 700;
   padding: 11px 20px;
@@ -59,9 +59,26 @@ $xlg: 1440px;
     background-color: $electricBlue;
   }
 
+  &.experience {
+    right: calc(50% - 45px);
+
+    @media screen and (max-width: $md) {
+      right: 5px;
+    }
+
+    .line {   
+      background-color: $black;
+      height: 355px;
+    }
+  }
+
   &.contact {
     .line {
       height: 334.8px;
+
+      @media screen and (max-width: $md) {
+        display: none;
+      }
     }
   }
 
@@ -74,7 +91,7 @@ $xlg: 1440px;
     }
 
     @media screen and (max-width: $md) {
-      left: 100px;
+      left: 120px;
     }
 
     &.projects {
@@ -90,7 +107,7 @@ $xlg: 1440px;
       height: 5px;
 
       @media screen and (max-width: $md) {
-        width: calc(100vw - 100px);
+        width: calc(100vw - 120px);
       }
     }
   }

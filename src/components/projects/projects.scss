@@ -27,8 +27,16 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (min-width: $md) and (max-width: $xlg) {
+    width: 45%;
+  }
+
   .description {
     max-width: 520px;
+
+    @media screen and (max-width: $md) {
+      font-size: 16px;
+    }
   }
 
   .description:nth-child(2) {
@@ -37,6 +45,8 @@
 
   .buttonDesktop {
     @extend .button;
+
+    max-width: 364px;
 
     @media screen and (max-width: $md) {
       display: none;
@@ -48,10 +58,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, max(150px, 100%/4)), 1fr));
   gap: 40px;
-  min-width: 50%;
+  min-width: 40%;
 
-  @media screen and (min-width: $md) and (max-width: $lg) {
-    gap: 30px;
+  @media screen and (min-width: $md) and (max-width: $xlg) {
+    gap: 20px;
   }
 
   @media screen and (max-width: $md) {
@@ -105,7 +115,6 @@
 .buttonMobile {
   @extend .button;
 
-  width: 100%;
   max-width: 575px;
   align-self: center;
   font-size: 18px;

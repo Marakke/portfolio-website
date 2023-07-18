@@ -4,11 +4,17 @@
   padding: 80px 80px 40px 80px;
   display: flex;
   flex-direction: row;
-  gap: 20%;
+  gap: 25%;
   background-color: $electricBlue;
 
+  h2 {
+    @media screen and (min-width: $md) {
+      margin-bottom: 80px;
+    }
+  }
+
   @media screen and (min-width: $md) and (max-width: $lg) {
-    gap: 10%;
+    gap: 15%;
   }
 
   @media screen and (max-width: $md) {
@@ -46,12 +52,13 @@
   
         @media screen and (max-width: $md) {
           flex-direction: column;
+          font-size: 18px;
         }
   
         .name {
           width: 350px;
 
-          @media screen and (min-width: $md) and (max-width: $xlg) {
+          @media screen and (min-width: $md) and (max-width: calc($xlg - 100px)) {
             width: 250px;
           }
 
@@ -75,15 +82,26 @@
 
     @media screen and (max-width: $md) {
       align-items: center;
+      font-size: 18px;
     }
 
     .work-place {
       display: flex;
       flex-direction: row;
-      gap: 20px;
+
+      @media screen and (max-width: $md) {
+        width: 100%;
+        justify-content: space-evenly;
+        font-size: 18px;
+      }
 
       .name {
         width: 100px;
+        text-align: left;
+
+        @media screen and (max-width: $md) {
+          font-size: 18px;
+        }
       }
 
       .years {
@@ -91,20 +109,6 @@
         align-items: center;
         justify-content: center;
       }
-    }
-  }
-}
-
-.lines {
-  &.experience {
-    right: calc(50% - 45px);
-
-    @media screen and (max-width: $md) {
-      right: 5px;
-    }
-
-    .line {   
-      background-color: $black;
     }
   }
 }
