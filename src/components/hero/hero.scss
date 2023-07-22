@@ -1,59 +1,44 @@
 @import '../../styles/theme.scss';
 
 .hero-container {
-  width: 100%;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-}
-
-.row {
   display: flex;
-  gap: 0px;
-}
-
-.tag {
-  opacity: 0.5;
-  font-size: 57.9px;
-  font-weight: 700;
-  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
 
   @media screen and (max-width: $md) {
-    font-size: 30px;
+    height: 180px;
   }
-}
 
-.tag2 {
-  @extend .tag;
-  opacity: 0.4;
-}
-
-.tag3 {
-  @extend .tag;
-  opacity: 0.3;
-}
-
-.tag4 {
-  @extend .tag;
-  opacity: 0.2;
-}
-
-.tag5 {
-  @extend .tag;
-  opacity: 0.1;
-}
-
-.text {
-  color: $electricBlue;
-  text-shadow:
-  -1px 1px 0px rgba(255, 255, 255, 0.3),
-  -2px 2px 0px rgba(255, 255, 255, 0.2),
-  -3px 3px 0px rgba(255, 255, 255, 0.1);
-  margin: 0;
-  white-space: nowrap;
-  font-size: 57.9px;
-  font-weight: 700;
-
-  @media screen and (max-width: $md) {
-    font-size: 30px;
+  .row {
+    width: 100%;
+    height: 100%;
+    background-image: url("../../images/tagPattern.svg");
+    background-repeat: repeat;
+    opacity: 0.5;
+  
+    @media screen and (max-width: $md) {
+      background-image: url("../../images/tagPatternMobile.svg");
+    }
+  }
+  
+  .row2 {
+    @extend .row;
+    opacity: 0.4;
+  }
+  
+  .row3 {
+    @extend .row;
+    opacity: 0.3;
+  }
+  
+  .row4 {
+    @extend .row;
+    opacity: 0.2;
+  }
+  
+  .row5 {
+    @extend .row;
+    opacity: 0.1;
   }
 }

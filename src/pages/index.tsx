@@ -13,8 +13,8 @@ import Contact from "../components/contact"
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <main>
+      <Hero />
       <div className="app">
-        <Hero />
         <Intro />
         <Skills />
         <Experience />
