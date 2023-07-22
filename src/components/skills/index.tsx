@@ -45,7 +45,7 @@ const Skills = () => {
         <h2>{skills.title}</h2>
         <CardCarousel>
           {skills.skills.map((skill: any, index: number) => (
-            <div key={index} className="skill-card">
+            <div key={index} className="skill-card" tabIndex={0}>
               {skill.image ? <Img {...skill.image} /> : <p className="template">{"</>"}</p>}
               <div className="skill-details">
                 <h3>{skill.name}</h3>

@@ -27,6 +27,8 @@
 
   .banner-text {
     text-align: center;
+    font-size: 24px;
+    margin-bottom: 0;
 
     @media screen and (max-width: $md) {
       font-size: 18px;
@@ -43,6 +45,7 @@
       min-height: 60px;
       background-color: $deepSea;
       font-size: 21px;
+      gap: 8px;
 
       @media screen and (max-width: $md) {
         width: 80px;

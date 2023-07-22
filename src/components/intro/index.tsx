@@ -9,6 +9,7 @@ const Intro = () => {
     query {
       intro: datoCmsIntro {
         title
+        subtitle
         descriptionTitle
         descriptionBody
         descriptionFooter
@@ -26,7 +27,7 @@ const Intro = () => {
 
   return (
     <div className="intro-container">
-      <h2>{intro.title}</h2>
+      <h2>{intro.title}{" - "}<span className="intro-subtitle">{intro.subtitle}</span></h2>
       <div className="intro-content">
         <Img {...intro.image} className="image" />
         <div>

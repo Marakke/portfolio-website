@@ -14,7 +14,7 @@ const Banner = () => {
         }
         buttons {
           logo {
-            fluid(imgixParams: { fit: "crop", w: "40", h: "40" }) {
+            fluid(imgixParams: { fit: "crop", w: "300", h: "300" }) {
               ...GatsbyDatoCmsFluid
             }
             alt
@@ -35,7 +35,7 @@ const Banner = () => {
   return (
     <div className="banner-container">
       <audio src={banner.audio.url} controls={true} controlsList="nodownload noplaybackrate" />
-      <h3 className="banner-text">{banner.text}</h3>
+      <h2 className="banner-text">{banner.text}</h2>
       <div className="banner-buttons">
         {banner.buttons.map(( button: any ) => (
           <button

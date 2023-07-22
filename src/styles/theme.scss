@@ -6,7 +6,7 @@ $electricBlue: #0073E6;
 $coralRed: #C35050;
 $white: #FFFFFF;
 
-$sm: 600px;
+$sm: 400px;
 $md: 768px;
 $lg: 1024px;
 $xlg: 1440px;
@@ -40,7 +40,7 @@ $xlg: 1440px;
 .lines {
   display: flex;
   position: absolute;
-  right: 100px;
+  right: 7%;
   margin-top: -80px;
   gap: 5px;
   z-index: 0;

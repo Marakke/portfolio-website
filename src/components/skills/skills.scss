@@ -39,11 +39,15 @@
     margin-top: 25%;
   }
 
-  &:hover {
+  &:hover, &:focus {
     height: 340px;
   }
 
   &:hover .skill-details { 
+    height: 140px;
+  }
+
+  &:focus .skill-details { 
     height: 140px;
   }
 }
@@ -90,7 +94,7 @@
 .help-text {
   background-color: $lightGray;
   color: $black;
-  margin: 0 auto;
+  margin: 20px auto 0 auto;
   width: fit-content;
   padding: 10px;
   border-radius: 6px;

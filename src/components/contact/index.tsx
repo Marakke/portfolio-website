@@ -29,8 +29,11 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-title">
-        <h2 className="title-white">{contact.titleWhite}</h2>
-        <h2 className="title-black">{contact.titleBlack}</h2>
+        <h2 className="title-white">
+          {contact.titleWhite}
+          {" "}
+          <span className="title-black">{contact.titleBlack}</span>
+        </h2>
       </div>
       <div className="contact-content">
         <div className="contact-links">
@@ -42,13 +45,13 @@ const Contact = () => {
           </div>
           <div className="contact-link">
             <img src={linkedinSvg} alt="LinkedIn Icon" />
-            <a href={"https://" + contact.linkedin} className="link">
+            <a href={"https://" + contact.linkedin} target="_blank" className="link">
               {contact.linkedin}
             </a>
           </div>
           <div className="contact-link">
             <img src={githubSvg} alt="GitHub Icon" />
-            <a href={"https://" + contact.github} className="link">
+            <a href={"https://" + contact.github} target="_blank" className="link">
               {contact.github}
             </a>
           </div>

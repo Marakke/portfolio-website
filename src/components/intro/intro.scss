@@ -8,34 +8,46 @@
   @media screen and (max-width: $md) {
     padding: 20px 20px 30px 20px;
   }
-}
 
-.intro-content {
-  display: flex;
-  gap: 80px;
-  z-index: 1;
+  h2 {
+    margin-right: 80px;
 
-  @media screen and (max-width: $md) {
-    flex-direction: column;
-    gap: 20px;
+    @media screen and (max-width: $md) {
+      max-width: 250px;
+    }
   }
-}
 
-.image {
-  min-width: 300px;
-  max-width: 300px;
-  height: 300px;
-  border-radius: 50%;
-
-  @media screen and (max-width: $md) {
-    align-self: center;
+  .intro-subtitle {
+    color: $electricBlue;
   }
-}
 
-.description {
-  max-width: 780px;
+  .intro-content {
+    display: flex;
+    gap: 80px;
+    z-index: 1;
+  
+    @media screen and (max-width: $md) {
+      flex-direction: column;
+      gap: 20px;
+    }
 
-  &:nth-child(2) {
-    margin: 20px 0;
+    .image {
+      min-width: 300px;
+      max-width: 300px;
+      height: 300px;
+      border-radius: 50%;
+    
+      @media screen and (max-width: $md) {
+        align-self: center;
+      }
+    }
+    
+    .description {
+      max-width: 780px;
+    
+      &:nth-child(2) {
+        margin: 20px 0;
+      }
+    }
   }
 }
