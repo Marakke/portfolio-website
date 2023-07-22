@@ -1,0 +1,32 @@
+@import '../../styles/theme.scss';
+
+.footer-container {
+  display: flex;
+  background-color: $slateGray;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  @media screen and (max-width: $md) {
+    flex-direction: column;
+    height: 104px;
+    gap: 20px;
+  }
+
+  a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .accessibility-report {
+    display: flex;
+    gap: 10px; 
+  }
+}
