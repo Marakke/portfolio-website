@@ -5,9 +5,28 @@
   flex-direction: column;
   width: 100%;
   height: 280px;
+  overflow: hidden;
 
   @media screen and (max-width: $md) {
     height: 180px;
+  }
+
+  @keyframes backgroundAnimationRight {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 0;
+    }
+  }
+
+  @keyframes backgroundAnimationLeft {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
   }
 
   .row {
@@ -16,6 +35,7 @@
     background-image: url("../../images/tagPattern.svg");
     background-repeat: repeat;
     opacity: 0.5;
+    animation: backgroundAnimationRight 20s linear infinite alternate;
   
     @media screen and (max-width: $md) {
       background-image: url("../../images/tagPatternMobile.svg");
@@ -25,6 +45,7 @@
   .row2 {
     @extend .row;
     opacity: 0.4;
+    animation: backgroundAnimationLeft 20s linear infinite alternate;
   }
   
   .row3 {
@@ -35,6 +56,7 @@
   .row4 {
     @extend .row;
     opacity: 0.2;
+    animation: backgroundAnimationLeft 20s linear infinite alternate;
   }
   
   .row5 {

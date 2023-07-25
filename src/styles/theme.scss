@@ -37,6 +37,24 @@ $xlg: 1440px;
   }
 }
 
+@keyframes loadingAnimationVertical {
+  from {
+    height: 0px;
+  }
+  to {
+    height: var(--line-height);
+  }
+}
+
+@keyframes loadingAnimationHorizontal {
+  from {
+    left: 100%;
+  }
+  to {
+    left: var(--line-left);;
+  }
+}
+
 .lines {
   display: flex;
   position: absolute;
@@ -55,8 +73,9 @@ $xlg: 1440px;
 
   .line {
     width: 5px;
-    height: 400px;
+    --line-height: 400px;
     background-color: $electricBlue;
+    animation: loadingAnimationVertical 1s ease-in-out forwards;
   }
 
   &.experience {
@@ -68,13 +87,13 @@ $xlg: 1440px;
 
     .line {   
       background-color: $black;
-      height: 355px;
+      --line-height: 355px;
     }
   }
 
   &.contact {
     .line {
-      height: 334.8px;
+      --line-height: 334.8px;
 
       @media screen and (max-width: $md) {
         display: none;
@@ -84,14 +103,15 @@ $xlg: 1440px;
 
   &.horizontal {
     flex-direction: column;
-    left: calc(100% - 400px);
+    --line-left: calc(100% - 400px);
+    animation: loadingAnimationHorizontal 1s ease-in-out forwards;
     
     @media screen and (min-width: $xlg) {
-      left: calc((100vw - 1440px) / 2 + 1440px - 409px);
+      --line-left: calc((100vw - 1440px) / 2 + 1440px - 409px);
     }
 
     @media screen and (max-width: $md) {
-      left: 120px;
+      --line-left: 120px;
     }
 
     &.projects {
@@ -105,6 +125,7 @@ $xlg: 1440px;
     .line {
       width: 400px;
       height: 5px;
+      animation: none;
 
       @media screen and (max-width: $md) {
         width: calc(100vw - 120px);
