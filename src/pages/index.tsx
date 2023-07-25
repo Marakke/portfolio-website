@@ -12,6 +12,7 @@ import Projects from "../components/projects"
 import Banner from "../components/banner"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
+import ScrollToTopButton from "../components/scrollToTopButton"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -33,6 +34,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Banner />
         <Contact />
         <Footer />
+        <ScrollToTopButton />
       </div>
     </main>
   )
