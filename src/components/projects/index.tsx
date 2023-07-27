@@ -17,6 +17,12 @@ const Projects = () => {
           client
           name
           link
+          tagHeader {
+            name
+          }
+          tagFooter {
+            name
+          }
         }
       }
     }
@@ -55,6 +61,18 @@ const Projects = () => {
             >
               <p className="client">{project.client}</p>
               <p className="name">{project.name}</p>
+              <div className="tags">
+                <div className="tagsHeader">
+                  {project.tagHeader.map((tag: any, index: number) => (
+                    <p className="tagHeader" key={index}>{tag.name}</p>
+                  ))}
+                </div>
+                <div className="tagsFooter">
+                  {project.tagFooter.map((tag: any, index: number) => (
+                    <p className="tagFooter" key={index}>{tag.name}</p>
+                  ))}
+                </div>
+              </div>
             </button>
           ))}
         </div>
