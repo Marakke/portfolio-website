@@ -39,7 +39,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="projects-container">
+    <div className="projects-container" data-testid="projects-container">
       <h2>{projects.title}</h2>
       <div className="projects-content">
         <div className="content-left">

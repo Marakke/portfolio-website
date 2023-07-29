@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders the Footer component correctly 1`] = `
+<div>
+  <div
+    class="footer-container"
+    data-testid="footer-container"
+  >
+    <a
+      class="accessibility-report"
+      href="accessibility-report-url"
+      target="_blank"
+    >
+      <img
+        alt="Download Icon"
+        src="test-file-stub"
+      />
+      Accessibility Report Title
+    </a>
+    <a
+      class="source-code"
+      href="source-code-link"
+      target="_blank"
+    >
+      Source Code Title
+    </a>
+  </div>
+</div>
+`;

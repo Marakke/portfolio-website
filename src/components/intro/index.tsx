@@ -26,7 +26,7 @@ const Intro = () => {
   const { intro } = data
 
   return (
-    <div className="intro-container">
+    <div className="intro-container" data-testid="intro-container">
       <h2>{intro.title}{" - "}<span className="intro-subtitle">{intro.subtitle}</span></h2>
       <div className="intro-content">
         <Img {...intro.image} className="image" />

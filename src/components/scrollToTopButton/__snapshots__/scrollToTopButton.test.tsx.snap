@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollToTopButton renders the ScrollToTopButton component 1`] = `
+<div>
+  <button
+    class="scroll-to-top-button "
+  >
+    <img
+      alt="Scroll to top"
+      src="test-file-stub"
+    />
+  </button>
+</div>
+`;

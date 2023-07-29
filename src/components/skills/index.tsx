@@ -9,7 +9,7 @@ import "./skills.scss"
 const Skills = () => {
   const data = useStaticQuery(graphql`
     query {
-      skills: datoCmsSkillset {
+      skillset: datoCmsSkillset {
         title
         skills {
           name
@@ -27,7 +27,7 @@ const Skills = () => {
     }
   `)
 
-  const { skills } = data
+  const { skillset } = data
 
   const [showHelp, setShowHelp] = useState(false);
 
@@ -40,11 +40,11 @@ const Skills = () => {
   };
 
   return (
-    <div className="skills-container">
+    <div className="skills-container" data-testid="skills-container">
       <div className="skills-content">
-        <h2>{skills.title}</h2>
+        <h2>{skillset.title}</h2>
         <CardCarousel>
-          {skills.skills.map((skill: any, index: number) => (
+          {skillset.skills.map((skill: any, index: number) => (
             <div key={index} className="skill-card" tabIndex={0}>
               {skill.image ? <Img {...skill.image} /> : <p className="template">{"</>"}</p>}
               <div className="skill-details">
@@ -65,7 +65,7 @@ const Skills = () => {
             </div>
           ))}
         </CardCarousel>
-        {showHelp && <div className="help-text">{skills.helpText}</div>}
+        {showHelp && <div className="help-text">{skillset.helpText}</div>}
       </div>
       <div className="lines horizontal">
         <p className="line horizontal" />

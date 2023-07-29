@@ -33,7 +33,7 @@ const Banner = () => {
   }
 
   return (
-    <div className="banner-container">
+    <div className="banner-container" data-testid="banner-container">
       <audio src={banner.audio.url} controls={true} controlsList="nodownload noplaybackrate" />
       <h2 className="banner-text">{banner.text}</h2>
       <div className="banner-buttons">

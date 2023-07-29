@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Experience renders the Experience component correctly 1`] = `
+<div>
+  <div
+    class="experience-container"
+    data-testid="experience-container"
+  >
+    <div
+      class="education-container"
+    >
+      <h2>
+        Education Title
+      </h2>
+      <div
+        class="education-content"
+      >
+        <h3
+          class="university"
+        >
+          Test University
+        </h3>
+        <div
+          class="programmes"
+        >
+          <div
+            class="programme"
+          >
+            <p
+              class="name"
+            >
+              Programme
+            </p>
+            <p
+              class="years"
+            >
+              2020
+               
+              -&gt;
+               
+              2023
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="work-experience-container"
+    >
+      <h2>
+        Work Experience Title
+      </h2>
+      <div
+        class="work-places"
+      >
+        <div
+          class="work-place"
+        >
+          <h3
+            class="name"
+          >
+            Work Place
+          </h3>
+          <p
+            class="years"
+          >
+            2020
+             
+            -&gt;
+             
+            2023
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="lines experience"
+    >
+      <p
+        class="line experience"
+      />
+      <p
+        class="line experience"
+      />
+      <p
+        class="line experience"
+      />
+      <p
+        class="line experience"
+      />
+      <p
+        class="line experience"
+      />
+    </div>
+  </div>
+</div>
+`;

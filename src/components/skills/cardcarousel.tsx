@@ -62,7 +62,7 @@ export const CardCarousel = ({ children }: any) => {
         ))}
       </div>
       {!lastVisible && (
-        <button onClick={next} className="card-carousel-button-right">
+        <button onClick={next} className="card-carousel-button-right" data-testid="button-right">
           <span>{">"}</span>
         </button>
       )}

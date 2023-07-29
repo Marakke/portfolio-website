@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact renders the Contact component correctly 1`] = `
+<div>
+  <div
+    class="contact-container"
+    data-testid="contact-container"
+  >
+    <div
+      class="contact-title"
+    >
+      <h2
+        class="title-white"
+      >
+        Test Title White
+         
+        <span
+          class="title-black"
+        >
+          Test Title Black
+        </span>
+      </h2>
+    </div>
+    <div
+      class="contact-content"
+    >
+      <div
+        class="contact-links"
+      >
+        <div
+          class="contact-link"
+        >
+          <img
+            alt="Email Icon"
+            src="test-file-stub"
+          />
+          <a
+            class="link"
+            href="mailto:email@email.com"
+          >
+            email@email.com
+          </a>
+        </div>
+        <div
+          class="contact-link"
+        >
+          <img
+            alt="LinkedIn Icon"
+            src="test-file-stub"
+          />
+          <a
+            class="link"
+            href="https://linkedinaccount"
+            target="_blank"
+          >
+            linkedinaccount
+          </a>
+        </div>
+        <div
+          class="contact-link"
+        >
+          <img
+            alt="GitHub Icon"
+            src="test-file-stub"
+          />
+          <a
+            class="link"
+            href="https://githubaccount"
+            target="_blank"
+          >
+            githubaccount
+          </a>
+        </div>
+      </div>
+      <div
+        class="contact-description"
+      >
+        <p
+          class="description"
+        >
+          Test Description Header
+        </p>
+        <p
+          class="description"
+        >
+          Test 
+          Description 
+          Footer 
+        </p>
+      </div>
+    </div>
+    <div
+      class="lines contact"
+    >
+      <p
+        class="line"
+      />
+      <p
+        class="line"
+      />
+      <p
+        class="line"
+      />
+      <p
+        class="line"
+      />
+      <p
+        class="line"
+      />
+    </div>
+  </div>
+</div>
+`;

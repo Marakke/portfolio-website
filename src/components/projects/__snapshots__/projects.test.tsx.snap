@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Projects renders the Projects component correctly 1`] = `
+<div>
+  <div
+    class="projects-container"
+    data-testid="projects-container"
+  >
+    <h2>
+      Test Title
+    </h2>
+    <div
+      class="projects-content"
+    >
+      <div
+        class="content-left"
+      >
+        <div>
+          <p
+            class="description"
+          >
+            Test Description Top
+          </p>
+          <p
+            class="description"
+          >
+            Test Description Bottom
+          </p>
+        </div>
+        <button
+          class="buttonDesktop"
+        >
+          <img
+            alt="GitHub Icon"
+            src="test-file-stub"
+          />
+          Button Text
+        </button>
+      </div>
+      <div
+        class="content-right"
+      >
+        <button
+          class="project "
+        >
+          <p
+            class="client"
+          >
+            Client
+          </p>
+          <p
+            class="name"
+          >
+            Project Name
+          </p>
+          <div
+            class="tags"
+          >
+            <div
+              class="tagsHeader"
+            >
+              <p
+                class="tagHeader"
+              >
+                Tag Header
+              </p>
+            </div>
+            <div
+              class="tagsFooter"
+            >
+              <p
+                class="tagFooter"
+              >
+                Tag Footer
+              </p>
+            </div>
+          </div>
+        </button>
+      </div>
+      <button
+        class="buttonMobile"
+      >
+        <img
+          alt="GitHub Icon"
+          src="test-file-stub"
+        />
+        Button Text
+      </button>
+    </div>
+    <div
+      class="lines horizontal projects"
+    >
+      <p
+        class="line horizontal"
+      />
+      <p
+        class="line horizontal"
+      />
+      <p
+        class="line horizontal"
+      />
+      <p
+        class="line horizontal"
+      />
+      <p
+        class="line horizontal"
+      />
+    </div>
+  </div>
+</div>
+`;

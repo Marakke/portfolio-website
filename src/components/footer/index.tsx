@@ -21,7 +21,7 @@ const Footer = () => {
   const { footer } = data
 
   return (
-    <div className="footer-container">
+    <div className="footer-container" data-testid="footer-container">
       <a href={footer.accessibilityReport.url} target="_blank" className="accessibility-report">
         <img src={linkSvg} alt="Download Icon" />
         {footer.accessibilityReportTitle}
