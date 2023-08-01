@@ -3,45 +3,45 @@ import React, { useRef, useState, useEffect } from "react"
 import "./cardcarousel.scss"
 
 export const CardCarousel = ({ children }: any) => {
-  const ref = useRef(null)
-  const items = useRef([])
+  const ref = useRef(null);
+  const items = useRef([]);
 
-  const [firstVisible, setFirstVisible] = useState(true)
-  const [lastVisible, setLastVisible] = useState(false)
+  const [firstVisible, setFirstVisible] = useState(true);
+  const [lastVisible, setLastVisible] = useState(false);
 
   useEffect(() => {
-    const firstItemRef = items.current[0]
-    const lastItemRef = items.current[items.current.length - 1]
+    const firstItemRef = items.current[0];
+    const lastItemRef = items.current[items.current.length - 1];
 
     const firstItemObserver = new IntersectionObserver(
       entries => setFirstVisible(entries[0].isIntersecting),
-      { root: ref.current, threshold: 0.5 }
-    )
-    firstItemObserver.observe(firstItemRef)
+      { root: ref.current, threshold: 1 }
+    );
+    firstItemObserver.observe(firstItemRef);
 
     const lastItemObserver = new IntersectionObserver(
       entries => setLastVisible(entries[0].isIntersecting),
       { root: ref.current, threshold: 1 }
-    )
-    lastItemObserver.observe(lastItemRef)
+    );
+    lastItemObserver.observe(lastItemRef);
 
     return () => {
-      firstItemObserver.disconnect()
-      lastItemObserver.disconnect()
+      firstItemObserver.disconnect();
+      lastItemObserver.disconnect();
     }
-  }, [ref.current, items.current])
+  }, [ref.current, items.current]);
 
   const next = () =>
     ref.current.scrollBy({
-      left: 240, // card width
+      left: 228,
       behavior: "smooth",
-    })
+    });
 
   const prev = () =>
     ref.current.scrollBy({
-      left: -240, // card width
+      left: -228,
       behavior: "smooth",
-    })
+    });
 
   return (
     <div className="card-carousel-wrapper">
