@@ -48,10 +48,10 @@ $xlg: 1440px;
 
 @keyframes loadingAnimationHorizontal {
   from {
-    left: 100%;
+    width: 0px;
   }
   to {
-    left: var(--line-left);;
+    width: var(--line-width);
   }
 }
 
@@ -103,15 +103,14 @@ $xlg: 1440px;
 
   &.horizontal {
     flex-direction: column;
-    --line-left: calc(100% - 400px);
-    animation: loadingAnimationHorizontal 1s ease-in-out forwards;
+    left: calc(100% - 400px);
     
     @media screen and (min-width: $xlg) {
-      --line-left: calc((100vw - 1440px) / 2 + 1440px - 409px);
+      left: calc((100vw - 1440px) / 2 + 1440px - 409px);
     }
 
     @media screen and (max-width: $md) {
-      --line-left: 120px;
+      left: 120px;
     }
 
     &.projects {
@@ -123,12 +122,12 @@ $xlg: 1440px;
     }
 
     .line {
-      width: 400px;
+      --line-width: 400px;
       height: 5px;
-      animation: none;
+      animation: loadingAnimationHorizontal 1s ease-in-out forwards;
 
       @media screen and (max-width: $md) {
-        width: calc(100vw - 120px);
+        --line-width: calc(100vw - 120px);
       }
     }
   }

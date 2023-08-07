@@ -8,19 +8,27 @@
   background: linear-gradient(90deg, #FF8A00 0%, #17A300 100%);
   padding: 0 20px;
 
+  @media screen and (max-width: $lg) {
+    justify-content: space-evenly;
+  }
+
   audio {
-    width: 300px;
+    max-width: 300px;
     min-width: 84px;
     
     &::-webkit-media-controls-panel {
       background: linear-gradient(90deg, #17A300 0%, #FF8A00 100%);
     }
 
-    @media screen and (max-width: $md) {
+    @media screen and (max-width: $lg) {
       width: 84px;
 
       &::-webkit-media-controls-timeline {
-        display: none;
+        display: none !important;
+      }
+
+      &::-webkit-media-controls-play-button {
+        display: flex !important;
       }
     }
   }

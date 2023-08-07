@@ -33,6 +33,7 @@
 
   .description {
     max-width: 520px;
+    text-align: justify;
 
     @media screen and (max-width: $md) {
       font-size: 16px;
@@ -47,6 +48,8 @@
     @extend .button;
 
     max-width: 364px;
+    text-align: left;
+    gap: 20px;
 
     @media screen and (max-width: $md) {
       display: none;
@@ -189,6 +192,11 @@
   max-width: 575px;
   align-self: center;
   font-size: 18px;
+  text-align: left;
+  
+  @media screen and (max-width: "540px") {
+    gap: 20px;
+  }
   
   @media screen and (min-width: $md) {
     display: none;

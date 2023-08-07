@@ -67,6 +67,7 @@
 
     .contact-description {
       font-weight: 500;
+      text-align: justify;
 
       @media screen and (max-width: $md) {
         font-size: 16px;
