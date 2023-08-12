@@ -40,7 +40,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="skills-container" data-testid="skills-container">
+    <div className="skills-container" id="skills" data-testid="skills-container">
       <div className="skills-content">
         <h2>{skillset.title}</h2>
         <CardCarousel>

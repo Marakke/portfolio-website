@@ -27,7 +27,7 @@ const Contact = () => {
   const highlightedWords = contact.highlightedWords.split(", ");
 
   return (
-    <div className="contact-container" data-testid="contact-container">
+    <div className="contact-container" id="contact" data-testid="contact-container">
       <div className="contact-title">
         <h2 className="title-white">
           {contact.titleWhite}

@@ -10,7 +10,8 @@
 
   @media screen and (max-width: $md) {
     flex-direction: column;
-    height: 104px;
+    height: auto;
+    padding: 20px;
     gap: 20px;
   }
 

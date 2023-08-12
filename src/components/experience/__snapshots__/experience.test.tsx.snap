@@ -5,6 +5,7 @@ exports[`Experience renders the Experience component correctly 1`] = `
   <div
     class="experience-container"
     data-testid="experience-container"
+    id="experience"
   >
     <div
       class="education-container"

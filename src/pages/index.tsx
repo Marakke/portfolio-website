@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import "./index.scss"
 
+import Navbar from "../components/navbar"
 import Hero from "../components/hero"
 import Intro from "../components/intro"
 import Skills from "../components/skills"
@@ -25,6 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
             Check out my portfolio to see my latest projects and skills!"
         />
       </Helmet>
+      <Navbar />
       <Hero />
       <div className="app">
         <Intro />

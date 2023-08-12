@@ -5,6 +5,7 @@ exports[`Skills renders the Skills component correctly 1`] = `
   <div
     class="skills-container"
     data-testid="skills-container"
+    id="skills"
   >
     <div
       class="skills-content"

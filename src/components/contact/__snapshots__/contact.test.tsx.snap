@@ -5,6 +5,7 @@ exports[`Contact renders the Contact component correctly 1`] = `
   <div
     class="contact-container"
     data-testid="contact-container"
+    id="contact"
   >
     <div
       class="contact-title"

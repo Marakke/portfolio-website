@@ -5,6 +5,7 @@ exports[`Intro renders the Intro component correctly 1`] = `
   <div
     class="intro-container"
     data-testid="intro-container"
+    id="introduction"
   >
     <h2>
       Test Title

@@ -1,0 +1,37 @@
+@import '../../styles/theme.scss';
+
+.navbar-container {
+  display: flex;
+  background: linear-gradient(180deg, $deepSea 0%, $black 100%);
+  height: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  overflow: hidden;
+
+  @media screen and (max-width: $md) {
+    height: auto;
+    gap: 0;
+    padding: 10px 0;
+    flex-wrap: wrap;
+  }
+
+  a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: $md) {
+      font-size: 16px;
+      margin: 10px 20px;
+    }
+  }
+}

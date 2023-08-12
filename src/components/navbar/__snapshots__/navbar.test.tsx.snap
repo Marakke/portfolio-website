@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders the Navbar component correctly 1`] = `
+<div>
+  <div
+    class="navbar-container"
+    data-testid="navbar-container"
+  >
+    <a
+      class="navbar-item"
+      href="#item1"
+    >
+      Item1
+    </a>
+    <a
+      class="navbar-item"
+      href="#item2"
+    >
+      Item2
+    </a>
+  </div>
+</div>
+`;
