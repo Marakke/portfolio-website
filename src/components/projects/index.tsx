@@ -1,6 +1,7 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import githubSvg from "../../images/github.svg";
+import ProjectCard from "./projectCard"
+import githubSvg from "../../images/github.svg"
 
 import "./projects.scss"
 
@@ -17,6 +18,12 @@ const Projects = () => {
           client
           name
           link
+          backgroundColor {
+            hex
+          }
+          textColor {
+            hex
+          }
           tagHeader {
             name
           }
@@ -34,10 +41,6 @@ const Projects = () => {
     window.open(projects.buttonLink, "_blank");
   }
 
-  const handleProjectClick = (project: any) => {
-    window.open(project.link, "_blank");
-  }
-
   return (
     <div className="projects-container" id="projects" data-testid="projects-container">
       <h2>{projects.title}</h2>
@@ -53,28 +56,19 @@ const Projects = () => {
           </button>
         </div>
         <div className="content-right">
-          {projects.projects.map(( project: any ) => (
-            <button
-              key={project.name}
-              className={`project ${!project.link ? 'no-link' : ''}`}
-              onClick={() => handleProjectClick(project)}
-            >
-              <p className="client">{project.client}</p>
-              <p className="name">{project.name}</p>
-              <div className="tags">
-                <div className="tagsHeader">
-                  {project.tagHeader.map((tag: any, index: number) => (
-                    <p className="tagHeader" key={index}>{tag.name}</p>
-                  ))}
-                </div>
-                <div className="tagsFooter">
-                  {project.tagFooter.map((tag: any, index: number) => (
-                    <p className="tagFooter" key={index}>{tag.name}</p>
-                  ))}
-                </div>
-              </div>
-            </button>
-          ))}
+          <div className="projects-left">
+            <ProjectCard project={projects.projects[0]} cardIndex={1} />
+          </div>
+          <div className="projects-right">
+            <div className="projects-top">
+              <ProjectCard project={projects.projects[1]} cardIndex={2} />
+            </div>
+            <div className="projects-bottom">
+              {projects.projects.map((project: any, index: number) => (
+                index >= 2 && <ProjectCard key={index} project={project} cardIndex={index+1} />
+              ))}
+            </div>
+          </div>
         </div>
         <button className="buttonMobile" onClick={handleButtonClick}>
           <img src={githubSvg} alt="GitHub Icon" />
