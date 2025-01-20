@@ -10,15 +10,40 @@
   }
 
   h2 {
-    margin-right: 80px;
+    margin-right: 0;
 
     @media screen and (max-width: $md) {
       max-width: 250px;
     }
   }
 
+  .intro-titles {
+    display: flex;
+    gap: 20px;
+    z-index: 1;
+  }
+
+  .intro-intro-subtitles{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-title-divider {
+    align-content: center;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: $md) {
+      margin-bottom: 20px;
+    }
+  }
+
   .intro-subtitle {
     color: $electricBlue;
+  }
+
+  .intro-subtitleSecondary {
+    color: $coralRed;
+    margin-bottom: 20px;
   }
 
   .intro-content {
@@ -46,7 +71,7 @@
       max-width: 780px;
       text-align: justify;
     
-      &:nth-child(2) {
+      &:nth-child(3) {
         margin: 20px 0;
       }
     }

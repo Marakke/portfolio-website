@@ -17,7 +17,7 @@ $xlg: 1440px;
   width: 100%;
   min-height: 80px;
   border-radius: 20px;
-  background-color: $electricBlue;
+  background-color: $darkGray;
   color: $white;
   align-items: center;
   justify-content: space-evenly;
@@ -75,7 +75,7 @@ $xlg: 1440px;
   .line {
     width: 5px;
     --line-height: 400px;
-    background-color: $electricBlue;
+    background-color: $darkGray;
     animation: loadingAnimationVertical 1s ease-in-out forwards;
   }
 

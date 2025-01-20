@@ -10,8 +10,10 @@ const Intro = () => {
       intro: datoCmsIntro {
         title
         subtitle
+        subtitleSecondary
         descriptionTitle
         descriptionBody
+        descriptionSubbody
         descriptionFooter
         image {
           fluid(imgixParams: { fit: "crop", w: "300", h: "300" }) {
@@ -27,12 +29,20 @@ const Intro = () => {
 
   return (
     <div className="intro-container" id="introduction" data-testid="intro-container">
-      <h2>{intro.title}{" - "}<span className="intro-subtitle">{intro.subtitle}</span></h2>
+      <div className="intro-titles">
+        <h2>{intro.title}</h2>
+        <span className="intro-title-divider">{" - "}</span>
+        <div className="intro-subtitles">
+          <h3 className="intro-subtitle">{intro.subtitle}</h3>
+          <h3 className="intro-subtitleSecondary">{intro.subtitleSecondary}</h3>
+        </div>
+      </div>
       <div className="intro-content">
         <Img {...intro.image} className="image" />
         <div>
           <p className="description">{intro.descriptionTitle}</p>
           <p className="description">{intro.descriptionBody}</p>
+          <p className="description">{intro.descriptionSubbody}</p>
           <p className="description">{intro.descriptionFooter}</p>
         </div>
       </div>
