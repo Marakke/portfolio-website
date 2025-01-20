@@ -33,7 +33,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <Skills />
         <Experience />
         <Projects />
-        <Banner />
+        {/* <Banner /> */}
         <Contact />
         <Footer />
         <ScrollToTopButton />
