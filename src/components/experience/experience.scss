@@ -3,9 +3,9 @@
 .experience-container {
   padding: 80px 80px 40px 80px;
   display: flex;
-  flex-direction: row;
-  gap: 25%;
-  background-color: $electricBlue;
+  flex-direction: column;
+  gap: 80px;
+  background-color: $darkGray;
 
   h2 {
     @media screen and (min-width: $md) {
@@ -13,14 +13,42 @@
     }
   }
 
+  @media screen and (max-width: $md) {
+    padding: 20px 20px 30px 20px;
+  }
+}
+
+.work-and-education {
+  display: flex;
+  flex-direction: row;
+  gap: 25%;
+
   @media screen and (min-width: $md) and (max-width: $lg) {
     gap: 15%;
   }
 
   @media screen and (max-width: $md) {
-    padding: 20px 20px 30px 20px;
     gap: 40px;
     flex-direction: column;
+  }
+}
+
+.certificates {
+  display: flex;
+}
+
+.certificate-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  .certificate {
+    display: flex;
+    gap: 40px;
+
+    .link {
+      color: $white;
+    }
   }
 }
 
