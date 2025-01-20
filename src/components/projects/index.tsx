@@ -15,9 +15,8 @@ const Projects = () => {
         buttonText
         buttonLink
         projects {
-          client
+          clientDescription
           name
-          link
           backgroundColor {
             hex
           }

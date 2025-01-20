@@ -3,18 +3,13 @@ import React from "react"
 import "./projectCard.scss"
 
 const ProjectCard = ({ project, cardIndex }: { project: any; cardIndex: number }) => {
-  const handleProjectClick = (project: any) => {
-    window.open(project.link, "_blank");
-  }
-
   return (
     <button
       key={project.name}
-      className={`project-card ${!project.link ? 'no-link' : ''}`}
+      className="project-card"
       style={{ backgroundColor: project.backgroundColor.hex, color: project.textColor.hex }}
-      onClick={() => handleProjectClick(project)}
     >
-      <p className="client">{project.client}</p>
+      <p className="client">{project.clientDescription}</p>
       <p className="name">{project.name}</p>
       <div className="tags">
         <div className={`tags-header card-${cardIndex}`}>
