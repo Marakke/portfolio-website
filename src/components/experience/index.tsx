@@ -55,6 +55,7 @@ const Experience = () => {
             </div>
           </div>
         </div>
+        <p className="divider-vertical" />
         <div className="work-experience-container">
           <h2>{experience.workExperience.title}</h2>
           <div className="work-places">
@@ -67,6 +68,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
+      <p className="divider" />
       <div className="certifications">
         <h2>{experience.certificateList.title}</h2>
         <div className="certificate-list">
@@ -80,13 +82,6 @@ const Experience = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="lines experience">
-        <p className="line experience" />
-        <p className="line experience" />
-        <p className="line experience" />
-        <p className="line experience" />
-        <p className="line experience" />
       </div>
     </div>
   )

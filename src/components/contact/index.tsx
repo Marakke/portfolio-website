@@ -71,12 +71,12 @@ const Contact = () => {
           </p>
         </div>
       </div>
-      <div className="lines contact">
-        <p className="line" />
-        <p className="line" />
-        <p className="line" />
-        <p className="line" />
-        <p className="line" />
+      <div className="lines-contact">
+        <p className="line-contact" />
+        <p className="line-contact" />
+        <p className="line-contact" />
+        <p className="line-contact" />
+        <p className="line-contact" />
       </div>
     </div>
   )

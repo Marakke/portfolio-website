@@ -79,29 +79,6 @@ $xlg: 1440px;
     animation: loadingAnimationVertical 1s ease-in-out forwards;
   }
 
-  &.experience {
-    right: calc(50% - 45px);
-
-    @media screen and (max-width: $md) {
-      right: 5px;
-    }
-
-    .line {   
-      background-color: $black;
-      --line-height: 355px;
-    }
-  }
-
-  &.contact {
-    .line {
-      --line-height: 334.8px;
-
-      @media screen and (max-width: $md) {
-        display: none;
-      }
-    }
-  }
-
   &.horizontal {
     flex-direction: column;
     left: calc(100% - 400px);

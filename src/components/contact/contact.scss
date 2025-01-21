@@ -1,6 +1,7 @@
 @import '../../styles/theme.scss';
 
 .contact-container {
+  position: relative;
   padding: 80px 80px 40px 80px;
   display: flex;
   flex-direction: column;
@@ -80,6 +81,27 @@
         &:nth-child(2) {
           margin: 20px 0 0 0;
         }
+      }
+    }
+  }
+
+  .lines-contact {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 80px;
+    height: 100%;
+    gap: 10px;
+    pointer-events: none;
+
+    .line-contact {
+      width: 5px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, $coralRed, $slateGray);
+      animation: loadingAnimationVertical 1s ease-out forwards;
+
+      @media screen and (max-width: $md) {
+        display: none;
       }
     }
   }
