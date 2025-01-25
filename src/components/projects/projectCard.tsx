@@ -1,29 +1,37 @@
-import React from "react"
+import React, { useState } from "react"
+import arrowUpSvg from "../../images/arrowUp.svg"
 
 import "./projectCard.scss"
 
-const ProjectCard = ({ project, cardIndex }: { project: any; cardIndex: number }) => {
+const ProjectCard = ({ project, cardNumber }: { project: any; cardNumber: number }) => {
+  const [isExpanded, setIsExpanded] = useState(cardNumber === 1)
+
+  const toggleExpand = () => {
+    setIsExpanded(!isExpanded)
+  }
+
   return (
-    <button
+    <div
       key={project.name}
-      className="project-card"
-      style={{ backgroundColor: project.backgroundColor.hex, color: project.textColor.hex }}
+      className={`project-card ${isExpanded ? "expanded" : "collapsed"}`}
     >
-      <p className="client">{project.clientDescription}</p>
-      <p className="name">{project.name}</p>
-      <div className="tags">
-        <div className={`tags-header card-${cardIndex}`}>
-          {project.tagHeader.map((tag: any, index: number) => (
-            <p className={`tag-header card-${cardIndex}`} key={index}>{tag.name}</p>
-          ))}
-        </div>
-        <div className={`tags-footer card-${cardIndex}`}>
-          {project.tagFooter.map((tag: any, index: number) => (
-            <p className={`tag-footer card-${cardIndex}`} key={index}>{tag.name}</p>
-          ))}
-        </div>
+      <div className="card-header" onClick={toggleExpand}>
+        <p className="client">{project.clientDescription}</p>
+        <button className={`toggle-button ${isExpanded ? "expanded" : "collapsed"}`} onClick={toggleExpand}>
+          <img src={arrowUpSvg} alt="Scroll to top" />
+        </button>
       </div>
-    </button>
+      <p className="name">{project.name}</p>
+      {isExpanded && (
+        <div className="card-content">
+          <div className="tags">
+            {project.tags.map((tag: any, index: number) => (
+              <span className="tag" key={index}>{tag.name}</span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
   )
 }
 

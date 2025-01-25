@@ -23,10 +23,7 @@ const Projects = () => {
           textColor {
             hex
           }
-          tagHeader {
-            name
-          }
-          tagFooter {
+          tags {
             name
           }
         }
@@ -55,18 +52,10 @@ const Projects = () => {
           </button>
         </div>
         <div className="content-right">
-          <div className="projects-left">
-            <ProjectCard project={projects.projects[0]} cardIndex={1} />
-          </div>
-          <div className="projects-right">
-            <div className="projects-top">
-              <ProjectCard project={projects.projects[1]} cardIndex={2} />
-            </div>
-            <div className="projects-bottom">
-              {projects.projects.map((project: any, index: number) => (
-                index >= 2 && <ProjectCard key={index} project={project} cardIndex={index+1} />
-              ))}
-            </div>
+          <div className="projects">
+            {projects.projects.map((project: any, index: number) => (
+              <ProjectCard key={index} project={project} cardNumber={index + 1} />
+            ))}
           </div>
         </div>
         <button className="buttonMobile" onClick={handleButtonClick}>
