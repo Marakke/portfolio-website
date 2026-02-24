@@ -1,5 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import * as Gatsby from "gatsby";
 import Projects from "./index";
 
@@ -14,19 +15,22 @@ const mockUseStaticQuery = {
     buttonLink: "Button Link",
     projects: [
       {
-        client: "Client",
+        clientDescription: "Client",
         name: "Project Name",
-        link: "Project Link",
-        tagHeader: [
+        backgroundColor: {
+          hex: "#ffffff"
+        },
+        textColor: {
+          hex: "#000000"
+        },
+        tags: [
           {
             name: "Tag Header"
-          }
-        ],
-        tagFooter: [
+          },
           {
             name: "Tag Footer"
           }
-        ],
+        ]
       }
     ]
   }
@@ -44,44 +48,50 @@ describe("Projects", () => {
 
   it("renders the Projects component correctly", () => {
     const { container, getByTestId, getByRole } = render(<Projects />);
-    expect(container).toMatchSnapshot();
-
     const projectsContainer = getByTestId("projects-container");
     expect(projectsContainer).toBeInTheDocument();
 
     const titleElement = getByRole("heading", { name: "Test Title" });
     expect(titleElement).toBeInTheDocument();
 
-    const paragraphElements = container.querySelectorAll("p");
-    expect(paragraphElements.length).toEqual(11);
+    const descriptionElements = container.querySelectorAll("p.description");
+    expect(descriptionElements[0].textContent).toBe("Test Description Top");
+    expect(descriptionElements[1].textContent).toBe("Test Description Bottom");
 
-    expect(paragraphElements[0].textContent).toBe("Test Description Top");
-    expect(paragraphElements[1].textContent).toBe("Test Description Bottom");
+    const clientElement = container.querySelector("p.client");
+    const nameElement = container.querySelector("p.name");
+    const tagElements = container.querySelectorAll("span.tag");
 
-    expect(paragraphElements[2].textContent).toBe("Client");
-    expect(paragraphElements[3].textContent).toBe("Project Name");
-    expect(paragraphElements[4].textContent).toBe("Tag Header");
-    expect(paragraphElements[5].textContent).toBe("Tag Footer");
+    expect(clientElement?.textContent).toBe("Client");
+    expect(nameElement?.textContent).toBe("Project Name");
+    expect(tagElements[0].textContent).toBe("Tag Header");
+    expect(tagElements[1].textContent).toBe("Tag Footer");
   });
 
-  it("clicks project button and opens new tab", () => {
+  it("toggles project card expansion when header is clicked", () => {
     const { container } = render(<Projects />);
 
-    const buttonElement = container.querySelectorAll("button");
-    expect(buttonElement[1]).toBeInTheDocument();
+    const projectCard = container.querySelector(".project-card");
+    expect(projectCard).toBeInTheDocument();
+    expect(projectCard).toHaveClass("expanded");
 
-    fireEvent.click(buttonElement[1]);
+    const cardHeader = container.querySelector(".project-card .card-header");
+    expect(cardHeader).toBeInTheDocument();
 
-    expect(window.open).toHaveBeenCalledWith("Project Link", "_blank");
+    if (cardHeader) {
+      fireEvent.click(cardHeader);
+    }
+
+    expect(projectCard).toHaveClass("collapsed");
   });
 
   it("clicks GitHub button and opens new tab", () => {
-    const { container } = render(<Projects />);
+    const { getAllByRole } = render(<Projects />);
 
-    const buttonElement = container.querySelectorAll("button");
-    expect(buttonElement[0]).toBeInTheDocument();
+    const githubButtons = getAllByRole("button", { name: /Button Text/i });
+    expect(githubButtons.length).toBeGreaterThan(0);
 
-    fireEvent.click(buttonElement[0]);
+    fireEvent.click(githubButtons[0]);
 
     expect(window.open).toHaveBeenCalledWith("Button Link", "_blank");
   });

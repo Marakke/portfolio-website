@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import * as Gatsby from "gatsby";
 import Skills from "./index";
 import '../../../__mocks__/intersectionObserverMock';

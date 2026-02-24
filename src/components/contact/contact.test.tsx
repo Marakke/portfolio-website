@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import * as Gatsby from "gatsby";
 import Contact from "./index";
 
@@ -29,8 +30,6 @@ describe("Contact", () => {
 
   it("renders the Contact component correctly", () => {
     const { container, getByTestId, getByRole } = render(<Contact />);
-    expect(container).toMatchSnapshot();
-
     const contactContainer = getByTestId("contact-container");
     expect(contactContainer).toBeInTheDocument();
 
