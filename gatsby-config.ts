@@ -14,10 +14,15 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     {
-      resolve: 'gatsby-source-datocms',
+      resolve: 'gatsby-source-graphql',
       options: {
-        apiToken: process.env.DATOCMS_API_TOKEN
-      }
+        typeName: 'DatoCMS',
+        fieldName: 'datoCms',
+        url: 'https://graphql.datocms.com/',
+        headers: {
+          Authorization: `Bearer ${process.env.DATOCMS_API_TOKEN}`,
+        },
+      },
     },
     {
       resolve: 'gatsby-plugin-manifest',

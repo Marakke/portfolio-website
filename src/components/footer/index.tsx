@@ -7,18 +7,20 @@ import "./footer.scss"
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query {
-      footer: datoCmsFooter {
-        accessibilityReportTitle
-        accessibilityReport {
-          url
+      datoCms {
+        footer {
+          accessibilityReportTitle
+          accessibilityReport {
+            url
+          }
+          sourceCodeTitle
+          sourceCodeLink
         }
-        sourceCodeTitle
-        sourceCodeLink
       }
     }
   `)
 
-  const { footer } = data
+  const { footer } = data.datoCms
 
   return (
     <div className="footer-container" data-testid="footer-container">

@@ -1,32 +1,31 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import "./banner.scss"
 
 const Banner = () => {
   const data = useStaticQuery(graphql`
     query {
-      banner: datoCmsBanner {
-        text
-        audio {
-          url
-        }
-        buttons {
-          logo {
-            fluid(imgixParams: { fit: "crop", w: "300", h: "300" }) {
-              ...GatsbyDatoCmsFluid
-            }
-            alt
+      datoCms {
+        banner {
+          text
+          audio {
+            url
           }
-          name
-          link
-        }        
+          buttons {
+            logo {
+              url(imgixParams: { fit: crop, w: "300", h: "300" })
+              alt
+            }
+            name
+            link
+          }
+        }
       }
     }
   `)
 
-  const { banner } = data
+  const { banner } = data.datoCms
 
   const handleButtonClick = (link: string) => {
     window.open(link, "_blank");
@@ -43,7 +42,7 @@ const Banner = () => {
             className="banner-button"
             onClick={() => handleButtonClick(button.link)}
           >
-            <Img {...button.logo} className="logo" />
+            <img src={button.logo.url} alt={button.logo.alt} className="logo" />
             <p className="banner-button-text">{button.name}</p>
           </button>
         ))}

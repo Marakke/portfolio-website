@@ -8,30 +8,32 @@ import "./projects.scss"
 const Projects = () => {
   const data = useStaticQuery(graphql`
     query {
-      projects: datoCmsProjectList {
-        title
-        descriptionTop
-        descriptionBottom
-        buttonText
-        buttonLink
-        projects {
-          clientDescription
-          name
-          backgroundColor {
-            hex
-          }
-          textColor {
-            hex
-          }
-          tags {
+      datoCms {
+        projectList {
+          title
+          descriptionTop
+          descriptionBottom
+          buttonText
+          buttonLink
+          projects {
+            clientDescription
             name
+            backgroundColor {
+              hex
+            }
+            textColor {
+              hex
+            }
+            tags {
+              name
+            }
           }
         }
       }
     }
   `)
 
-  const { projects } = data
+  const { projectList: projects } = data.datoCms
 
   const handleButtonClick = () => {
     window.open(projects.buttonLink, "_blank");

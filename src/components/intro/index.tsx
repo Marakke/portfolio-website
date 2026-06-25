@@ -1,31 +1,30 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 
 import "./intro.scss"
 
 const Intro = () => {
   const data = useStaticQuery(graphql`
     query {
-      intro: datoCmsIntro {
-        title
-        subtitle
-        subtitleSecondary
-        descriptionTitle
-        descriptionBody
-        descriptionSubbody
-        descriptionFooter
-        image {
-          fluid(imgixParams: { fit: "crop", w: "300", h: "300" }) {
-            ...GatsbyDatoCmsFluid
+      datoCms {
+        intro {
+          title
+          subtitle
+          subtitleSecondary
+          descriptionTitle
+          descriptionBody
+          descriptionSubbody
+          descriptionFooter
+          image {
+            url(imgixParams: { fit: crop, w: "300", h: "300" })
+            alt
           }
-          alt
         }
       }
     }
   `)
 
-  const { intro } = data
+  const { intro } = data.datoCms
 
   return (
     <div className="intro-container" id="introduction" data-testid="intro-container">
@@ -38,7 +37,7 @@ const Intro = () => {
         </div>
       </div>
       <div className="intro-content">
-        <Img {...intro.image} className="image" />
+        <img src={intro.image.url} alt={intro.image.alt} className="image" />
         <div>
           <p className="description">{intro.descriptionTitle}</p>
           <p className="description">{intro.descriptionBody}</p>

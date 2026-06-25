@@ -9,20 +9,22 @@ import "./contact.scss"
 const Contact = () => {
   const data = useStaticQuery(graphql`
     query {
-      contact: datoCmsContact {
-        titleWhite
-        titleBlack
-        descriptionHeader
-        descriptionFooter
-        highlightedWords
-        email
-        linkedin
-        github
+      datoCms {
+        contact {
+          titleWhite
+          titleBlack
+          descriptionHeader
+          descriptionFooter
+          highlightedWords
+          email
+          linkedin
+          github
+        }
       }
     }
   `)
 
-  const { contact } = data
+  const { contact } = data.datoCms
 
   const highlightedWords = contact.highlightedWords.split(", ");
 

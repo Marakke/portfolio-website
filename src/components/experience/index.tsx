@@ -6,37 +6,39 @@ import "./experience.scss"
 const Experience = () => {
   const data = useStaticQuery(graphql`
     query {
-      experience: datoCmsExperience {
-        education {
-          title
-          university
-          programmes {
-            name
-            startYear
-            endYear
+      datoCms {
+        experience {
+          education {
+            title
+            university
+            programmes {
+              name
+              startYear
+              endYear
+            }
           }
-        }
-        workExperience {
-          title
-          workPlaces {
-            name
-            startYear
-            endYear
+          workExperience {
+            title
+            workPlaces {
+              name
+              startYear
+              endYear
+            }
           }
-        }
-        certificateList {
-          title
-          certifications {
-            name
-            issueDate
-            link
+          certificateList {
+            title
+            certifications {
+              name
+              issueDate
+              link
+            }
           }
         }
       }
     }
   `)
 
-  const { experience } = data
+  const { experience } = data.datoCms
 
   return (
     <div className="experience-container" id="experience" data-testid="experience-container">

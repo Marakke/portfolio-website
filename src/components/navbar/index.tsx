@@ -6,15 +6,17 @@ import "./navbar.scss"
 const Navbar = () => {
   const data = useStaticQuery(graphql`
     query {
-      navbar: datoCmsNavbar {
-        items {
-          name
+      datoCms {
+        navbar {
+          items {
+            name
+          }
         }
       }
     }
   `)
 
-  const { navbar } = data
+  const { navbar } = data.datoCms
 
   return (
     <div className="navbar-container" data-testid="navbar-container">

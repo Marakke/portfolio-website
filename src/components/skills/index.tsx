@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import { CardCarousel } from "./cardcarousel"
 import questionSvg from "../../images/question.svg";
 
@@ -9,25 +8,25 @@ import "./skills.scss"
 const Skills = () => {
   const data = useStaticQuery(graphql`
     query {
-      skillset: datoCmsSkillset {
-        title
-        skills {
-          name
-          image {
-            fluid(imgixParams: { fit: "crop", w: "300", h: "300" }) {
-              ...GatsbyDatoCmsFluid
+      datoCms {
+        skillset {
+          title
+          skills {
+            name
+            image {
+              url(imgixParams: { fit: crop, w: "300", h: "300" })
+              alt
             }
-            alt
+            level
+            xp
           }
-          level
-          xp
+          helpText
         }
-        helpText
       }
     }
   `)
 
-  const { skillset } = data
+  const { skillset } = data.datoCms
 
   const [showHelp, setShowHelp] = useState(false);
 
@@ -46,7 +45,7 @@ const Skills = () => {
         <CardCarousel>
           {skillset.skills.map((skill: any, index: number) => (
             <div key={index} className="skill-card" tabIndex={0}>
-              {skill.image ? <Img {...skill.image} /> : <p className="template">{"</>"}</p>}
+              {skill.image ? <img src={skill.image.url} alt={skill.image.alt} /> : <p className="template">{"</>"}</p>}
               <div className="skill-details">
                 <h3>{skill.name}</h3>
                 <div className="detail">
