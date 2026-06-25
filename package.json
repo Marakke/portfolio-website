@@ -59,6 +59,6 @@
     "postcss": ">=8.4.31",
     "cookie": ">=0.7.0 <1.0.0",
     "socket.io": ">=4.7.0",
-    "@parcel/reporter-dev-server": ">=2.16.1"
+    "@parcel/reporter-dev-server": ">=2.8.3 <3.0.0"
   }
 }
