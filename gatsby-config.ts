@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-datocms',
       options: {
-        "apiToken": "8175a773be9c08732070506f79673e"
+        apiToken: process.env.DATOCMS_API_TOKEN
       }
     },
     {
